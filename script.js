@@ -3,7 +3,7 @@ var typed = new Typed('#element', {
     typeSpeed: 50,
   });
   const menuIcon = document.querySelector('.bx-menu-alt-right');
-  const navList = document.querySelector('nav ul');
+  const navList = document.querySelector('ul');
 
   menuIcon.addEventListener('click', () => {
       navList.classList.toggle('active');
