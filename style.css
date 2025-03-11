@@ -22,10 +22,10 @@ nav ul {
     display: flex;
     justify-content: center;
     align-items: center;
+    list-style: none;
 }
 
 nav ul li {
-    list-style: none;
     margin: 0 15px;
 }
 
@@ -101,17 +101,49 @@ hr {
     height: 1.2px;
     margin: 40px 80px;
 }
+
 .second .box {
     width: 80vw;
     height: 2px;
-    margin: 66px 0px ;
+    margin: 66px 0px;
     border-bottom: 1px solid white;
     display: flex;
     justify-content: space-between;
 }
 
+.grey {
+    color: grey;
+}
+
+.box .vertical {
+    height: 93px;
+    width: 1px;
+    background-color: white;
+}
+
+.vertical span {
+    color: white;
+}
+
+.image-top {
+    width: 25px;
+    position: relative;
+    top: -32px;
+    left: -9px;
+}
+
+.vertical-title {
+    position: relative;
+    top: 75px;
+    width: 150px;
+}
+
+.vertical-title h2 {
+    color: white;
+}
+
 /* ----------- Hamburger Icon Style ------------ */
-.menu .bx-menu-alt-right {
+.bx-menu-alt-right {
     color: #fefeff;
     font-size: 35px;
     cursor: pointer;
@@ -119,37 +151,115 @@ hr {
     right: 20px;
     top: 20px;
     z-index: 200;
+    display: none;
 }
 
-.grey{
-    color: grey;
-}
-.box .vertical{
-  height: 93px;
-  width: 1px;
-  background-color: white;
 
-}
 
-.vertical span{
-    color: white;
-}
 
-.image-top{
-    width: 25px;
-    position: relative;
-    top: -32px;
-    left: -9px;
-}
-.vertical-title{
-    position: relative;
-    top: 75px;
-    width: 150px;
 
-}
-.vertical-title h2{
-    color: white;
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -157,7 +267,7 @@ hr {
 
 /* ------------------- Responsive Menu Styles ---------------------- */
 @media (max-width: 768px) {
-    .menu .bx-menu-alt-right {
+    .bx-menu-alt-right {
         display: block;
     }
 
@@ -173,10 +283,11 @@ hr {
         overflow: hidden;
         transition: height 0.3s ease-in-out;
         padding: 0;
+        z-index: 150;
     }
 
     nav ul.active {
-        height: 270px; /* Adjust height as per menu items */
+        height: 250px; /* Adjust according to number of menu items */
     }
 
     nav ul li {
@@ -216,7 +327,6 @@ hr {
     }
 
     nav ul {
-        right: 0;
         top: 60px;
         width: 100%;
     }
