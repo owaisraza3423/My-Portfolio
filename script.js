@@ -2,11 +2,11 @@ var typed = new Typed('#element', {
     strings: ['A front-end web developer.', 'A web designer.','Video Editor'],
     typeSpeed: 50,
   });
-  const menuIcon = document.querySelector('.bx-menu-alt-right');
-  const navList = document.querySelector('ul');
+   // Hamburger Menu Toggle
+   const menu = document.querySelector('.menu');
+   const navLinks = document.querySelector('.right ul');
 
-  menuIcon.addEventListener('click', () => {
-      navList.classList.toggle('active');
-  });
-
+   menu.addEventListener('click', () => {
+     navLinks.classList.toggle('show-menu');
+   });
 
