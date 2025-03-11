@@ -1,6 +1,7 @@
 * {
     padding: 0;
     margin: 0;
+    box-sizing: border-box;
     font-family: "Poppins", sans-serif;
 }
 
@@ -14,7 +15,7 @@ nav {
     align-items: center;
     padding: 20px;
     background-color: #27104a;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     position: relative;
 }
 
@@ -23,6 +24,7 @@ nav ul {
     justify-content: center;
     align-items: center;
     list-style: none;
+    transition: height 0.3s ease-in-out;
 }
 
 nav ul li {
@@ -46,7 +48,7 @@ nav ul li a {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    margin: 80px 0px;
+    margin: 80px 0;
     flex-wrap: wrap;
 }
 
@@ -54,10 +56,9 @@ nav ul li a {
     color: #fefeff;
     width: 30%;
     font-size: 2rem;
-    margin: 30px 0px;
+    margin: 30px 0;
     display: flex;
     flex-direction: column;
-    flex-wrap: wrap;
 }
 
 .rightsection {
@@ -66,7 +67,7 @@ nav ul li a {
 
 .rightsection img {
     width: 100%;
-    margin: 8px;
+    margin: 8px 0;
 }
 
 .purple {
@@ -75,10 +76,10 @@ nav ul li a {
 
 .button {
     display: flex;
-    flex-direction: row;
     gap: 30px;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 #element {
@@ -86,7 +87,7 @@ nav ul li a {
 }
 
 .second {
-    max-width: 80vw;
+    max-width: 100%;
     margin: auto;
     height: 80vh;
 }
@@ -105,41 +106,18 @@ hr {
 .second .box {
     width: 80vw;
     height: 2px;
-    margin: 66px 0px;
+    margin: 66px auto;
     border-bottom: 1px solid white;
     display: flex;
     justify-content: space-between;
 }
 
+main {
+    width: 100%;
+}
+
 .grey {
     color: grey;
-}
-
-.box .vertical {
-    height: 93px;
-    width: 1px;
-    background-color: white;
-}
-
-.vertical span {
-    color: white;
-}
-
-.image-top {
-    width: 25px;
-    position: relative;
-    top: -32px;
-    left: -9px;
-}
-
-.vertical-title {
-    position: relative;
-    top: 75px;
-    width: 150px;
-}
-
-.vertical-title h2 {
-    color: white;
 }
 
 /* ----------- Hamburger Icon Style ------------ */
@@ -151,124 +129,13 @@ hr {
     right: 20px;
     top: 20px;
     z-index: 200;
-    display: none;
+    display: none; /* Hidden by default */
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 /* ------------------- Responsive Menu Styles ---------------------- */
 @media (max-width: 768px) {
     .bx-menu-alt-right {
-        display: block;
+        display: block; /* Show hamburger icon */
     }
 
     nav ul {
@@ -281,13 +148,12 @@ hr {
         align-items: center;
         height: 0;
         overflow: hidden;
-        transition: height 0.3s ease-in-out;
         padding: 0;
         z-index: 150;
     }
 
     nav ul.active {
-        height: 250px; /* Adjust according to number of menu items */
+        height: 270px; /* Adjust according to number of menu items */
     }
 
     nav ul li {
@@ -318,6 +184,14 @@ hr {
         display: flex;
         justify-content: center;
         text-align: center;
+        height: auto;
+        padding: 20px 0;
+    }
+
+    .second .box {
+        flex-direction: column;
+        align-items: center;
+        height: auto;
     }
 }
 
@@ -328,7 +202,6 @@ hr {
 
     nav ul {
         top: 60px;
-        width: 100%;
     }
 
     .bx-menu-alt-right {
